@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+header{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url(wp.jpg);
+  background-position: bottom;
+  background-size:  cover;
+}
+/* ##### NAVBAR STYLE START####### */
+.navbar{
+ width: 100%;
+ height: 60px;
+ position: fixed;
+ top: 0;
+ /* background: #dc1809; */
+ font-family: "Ubuntu", sans-serif;
+ transition: all 0.3s ease;
+}
+.navbar.sticky{
+  background: #dc1809;
+  height: 50px;
+}
+
+.navbar .clearfix{
+  max-width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+ .navbar .nav-left{
+  float:left;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.navbar .logo{
+  color:white;
+  margin-left: 60px;
+  font-size: 36px;
+  font-weight: 500;
+}
+.navbar .logo span{
+  color:#dc1809;
+  transition: color 0.3s ease;
+}
+.navbar.sticky .logo span{
+  color:antiquewhite;
+}
+.navbar .nav-right{
+  width: 70%;
+  height: 100%;
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar .menu{
+  margin-right: 60px;
+}
+.navbar .menu li{
+  display: inline-block;
+  margin-right: 20px;
+
+}
+.navbar .menu li a{
+  font-size: 24px;
+  font-weight: 500;
+  color: white;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+  color: #dc1809;
+}
+
+.navbar.sticky .menu li a:hover{
+  color: antiquewhite;
+}
+/* MENU BUTTON */
+.menu-btn{
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  color: white;
+  margin-right: 30px;
+}
+
+/* ##### NAVBAR STYLE END ####### */
+
+/* ######## HOME SECTION STYLE START ######### */
+.home{
+  height: 100vh;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  font-family: "Ubuntu", sans-serif;
+
+}
+ .home .max-width{
+     margin-left: 60px;
+     color: white;
+ }
+
+ .home-content .text-1{
+   font-size: 27px;
+   margin-left: 10px;
+ }
+ .home-content .text-2{
+   font-size: 60px;
+   font-weight: 600;
+ }
+ .home-content .text-3{
+   font-size: 40px;
+   margin: 7px 0;
+ }
+ .home-content .text-3 span{
+   font-weight: 500;
+   color:#dc1809;
+ }
+
+/* ######## HOME SECTION STYLE END ######### */
+
+/* RESPONSIVE DESIGN START */
+@media only screen and (max-width:1200px) {
+@media only screen and (max-width:992px) {
+
+}
+
+@media only screen and (max-width:950px) {
+  .navbar .logo{
+    margin-left: 30px;
+  }
+
+  .navbar .menu{
+    position: fixed;
+    top:0;
+    left: -100%;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    padding-top: 85px;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active{
+    left: 0;
+  }
+  .navbar .menu li{
+    display: block;
+  }
+  .navbar .menu li a{
+    display: inline-block;
+    margin: 25px 0;
+  }
+  .menu-btn{
+    display: block;
+    z-index: 10;
+  }
+  .text-3.active .typed-cursor--blink{
+    display: none!important;
+  }
+
+  .menu-btn i.active::before{
+    content: "\f00d";
+  }
+
+  .home .max-width{
+      margin-left: 30px;
+  }
+
+  .home-content .text-2{
+    font-size: 50px;
+  }
+  .home-content .text-3{
+    font-size: 30px;
+  }
+
+}
+@media only screen and (max-width:768px) {
+  .home-content .text-2{
+    font-size: 45px;
+  }
+  .home-content .text-3{
+    font-size: 25px;
+  }
+}
